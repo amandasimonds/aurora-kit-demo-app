@@ -1,3 +1,7 @@
-hello world
-<aurora-button label="hello"></aurora-button>
-<aurora-card>content</aurora-card>
+<div class="wrapper" [class.aurora-dark-theme]="darkModeOn">
+  hello world
+  <aurora-button label="hello" kind="secondary"></aurora-button>
+  <aurora-card>content</aurora-card>
+
+  <aurora-button (click)="toggleDarkMode()" kind="secondary" [label]="darkModeOn ? 'Light Mode' : 'Dark Mode'"></aurora-button>
+</div>
